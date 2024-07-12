@@ -1,9 +1,5 @@
 import React, { useEffect, useState } from "react";
-import {
-  UserOutlined,
-  ShoppingCartOutlined,
-  SmileOutlined,
-} from "@ant-design/icons";
+import { UserOutlined, ShoppingCartOutlined } from "@ant-design/icons";
 import { Avatar, Space, Dropdown } from "antd";
 import "./Navbar.css";
 import { Link } from "react-router-dom";
@@ -11,12 +7,19 @@ import { Link } from "react-router-dom";
 const items = [
   {
     key: "1",
-    label: <a> profile</a>,
+    label: (
+      <Link style={{ fontWeight: "bold", textDecoration: "none" }}>
+        profile
+      </Link>
+    ),
   },
   {
     key: "2",
-    label: <a> details</a>,
-    icon: <SmileOutlined />,
+    label: (
+      <Link style={{ fontWeight: "bold", textDecoration: "none" }}>
+        details
+      </Link>
+    ),
   },
 ];
 

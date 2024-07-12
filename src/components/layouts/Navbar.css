@@ -55,8 +55,18 @@
 }
 
 .ant-dropdown-menu {
-  background: rgb(0, 0, 0, 0.1) !important;
+  background-color: rgba(255, 255, 255, 1) !important;
   backdrop-filter: blur(10px) !important;
+  -webkit-backdrop-filter: blur(10px) !important;
+}
+
+.ant-dropdown-menu-item:hover {
+  background-color: rgba(0, 0, 0, 0.3) !important;
+  color: #000000 !important;
+}
+
+.ant-dropdown-menu-item {
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 .navbar a {
@@ -131,7 +141,9 @@
     height: 25.7rem !important;
     opacity: 1 !important;
   }
-
+  #check:not(:checked) ~ .navbar {
+    height: 0rem !important;
+  }
   .navbar a {
     display: block !important;
     font-size: 1.1rem !important;
