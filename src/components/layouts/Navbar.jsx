@@ -5,7 +5,6 @@ import {
   SmileOutlined,
 } from "@ant-design/icons";
 import { Avatar, Space, Dropdown } from "antd";
-
 import "./Navbar.css";
 import { Link } from "react-router-dom";
 
@@ -51,7 +50,7 @@ const Navbar = () => {
         <Link style={{ "--i": 2 }}>Gallery</Link>
         <Link style={{ "--i": 3 }}>Services</Link>
         <Link className="nav-action-btn" style={{ "--i": 4 }}>
-          <Space direction="vertical" size={16}>
+          <Space direction="horizontal" size={16}>
             <Space wrap size={16}>
               <Avatar size={40} icon={<ShoppingCartOutlined />} />
               <Dropdown
@@ -59,7 +58,11 @@ const Navbar = () => {
                   items,
                 }}
               >
-                <Avatar size={40} icon={<UserOutlined />} />
+                <Avatar
+                  src={require("../../assets/image/imgprofie.jpg")}
+                  size={40}
+                  icon={<UserOutlined />}
+                />
               </Dropdown>
             </Space>
           </Space>
@@ -75,7 +78,11 @@ const Navbar = () => {
                 items,
               }}
             >
-              <Avatar size={40} icon={<UserOutlined />} />
+              <Avatar
+                src={require("../../assets/image/imgprofie.jpg")}
+                size={40}
+                icon={<UserOutlined />}
+              />
             </Dropdown>
           </Space>
         </Space>
