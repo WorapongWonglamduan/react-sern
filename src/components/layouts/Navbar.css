@@ -10,6 +10,10 @@
   justify-content: space-between;
   align-items: center;
   z-index: 100;
+  transition: 0.32s ease-in-out;
+}
+.header.scrolled {
+  padding: 1rem 10%;
 }
 .header::before {
   content: "";
@@ -22,6 +26,7 @@
   backdrop-filter: blur(50px);
   z-index: -1;
 }
+
 .header::after {
   content: "";
   position: absolute;
@@ -46,12 +51,22 @@
   font-weight: bold;
   color: #fff;
 }
+
+.ant-dropdown-menu {
+  background: rgb(0, 0, 0, 0.1) !important;
+  backdrop-filter: blur(10px) !important;
+}
+
 .navbar a {
   font-size: 1.5rem;
   color: #fff;
   text-decoration: none;
   font-weight: 500;
   margin-left: 2.5rem;
+}
+.navbar .nav-action-btn {
+  justify-content: center;
+  display: none;
 }
 #check {
   display: none;
@@ -69,6 +84,9 @@
   }
 }
 @media (max-width: 768px) {
+  .header .action-btn {
+    display: none;
+  }
   .icons {
     display: inline-flex;
   }
@@ -81,6 +99,7 @@
   #check:checked ~ .icons #close-icon {
     display: block;
   }
+
   .navbar {
     position: absolute;
     top: 100%;
@@ -95,6 +114,9 @@
   }
   #check:checked ~ .navbar {
     height: 17.7rem;
+  }
+  #check:checked ~ .navbar .nav-action-btn {
+    display: block;
   }
   .navbar a {
     display: block;
