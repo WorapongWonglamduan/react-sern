@@ -1,0 +1,8 @@
+.bg-body-tertiary {
+  padding: 15px 20px !important;
+  background: #eb2222 !important;
+  transition: 0.3s ease-in-out !important;
+}
+.bg-body-tertiary--active {
+  padding: 7px 10px !important;
+}

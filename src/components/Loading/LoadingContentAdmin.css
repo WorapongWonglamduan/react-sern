@@ -1,0 +1,47 @@
+.loading-content-admin {
+  position: relative;
+}
+
+.loading-content-admin--active {
+  pointer-events: none;
+}
+
+.loading-content-admin__content {
+  z-index: 1200;
+  position: absolute;
+  /* position: fixed; */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 88vh;
+  /* height: 100%; */
+  background-color: rgba(255, 255, 255, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.loading-content-admin__spinner {
+  border: 4px solid rgba(0, 0, 0, 0.1);
+  border-left-color: #333333;
+  animation: spin 1s linear infinite;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.loading-content-admin__text {
+  margin-top: 10px;
+  font-weight: bold;
+  color: #333;
+}

@@ -1,0 +1,14 @@
+:where(.css-dev-only-do-not-override-98ntnt).ant-card .ant-card-body {
+  padding: 24px;
+  padding-bottom: 0;
+  border-radius: 0 0 8px 8px;
+}
+
+:where(.css-dev-only-do-not-override-98ntnt).ant-switch.ant-switch-checked {
+  background: linear-gradient(45deg, #5c5c5c, #252525);
+}
+:where(
+    .css-dev-only-do-not-override-98ntnt
+  ).ant-switch.ant-switch-checked:hover:not(.ant-switch-disabled) {
+  background: linear-gradient(45deg, #5c5c5c, #252525);
+}

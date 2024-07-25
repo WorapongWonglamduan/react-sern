@@ -1,0 +1,89 @@
+footer.page-footer {
+  background: #15161d;
+  padding: 5rem 0;
+}
+footer.page-footer .navbar-brand {
+  display: flex;
+  align-items: center;
+  margin: 0;
+}
+footer.page-footer .navbar-brand h3 {
+  display: block;
+  margin: 0;
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  color: #fff;
+}
+footer.page-footer .navbar-brand span {
+  font-size: 0.8rem;
+  color: #fff;
+  margin-left: 0.5rem;
+}
+footer.page-footer hr {
+  margin: 2.5rem 0;
+  opacity: 0.1;
+}
+footer.page-footer h5 {
+  font-weight: bold;
+  font-size: 1rem;
+}
+@media (max-width: 767.9px) {
+  footer.page-footer h5 {
+    margin: 2.5rem 0 0.5rem 0;
+  }
+}
+footer.page-footer p {
+  font-size: 0.9rem;
+  color: rgba(31, 31, 31, 0.75);
+  margin: 0;
+}
+footer.page-footer .nav-link {
+  color: #fff;
+  font-size: 0.9rem;
+}
+footer.page-footer .socials {
+  list-style: none;
+  margin: 1rem 0 0 0;
+  padding: 0;
+  display: flex;
+  align-items: center;
+}
+footer.page-footer .socials li {
+  display: block;
+  margin-right: 0.5rem;
+}
+footer.page-footer .socials li a {
+  display: block;
+  width: 2.5rem;
+  height: 2.5rem;
+  background: rgba(31, 31, 31, 0.1);
+  border-radius: 0.5rem;
+  text-align: center;
+  line-height: 2.3rem;
+}
+footer.page-footer .socials li a:hover {
+  background: rgba(31, 31, 31, 0.2);
+}
+footer.page-footer .socials li a img {
+  width: 1rem;
+  height: 1rem;
+  padding: 0;
+}
+.btn-icon {
+  width: 1.25rem;
+  height: 1.25rem;
+  margin: -0.2rem 0.25rem 0 0.15rem;
+  display: inline-block;
+  object-fit: contain;
+}
+.btn-icon.icon-white {
+  filter: brightness(0) invert(1);
+}
+.title {
+  color: #fff;
+}
+.company-build {
+  color: #fff !important;
+}
