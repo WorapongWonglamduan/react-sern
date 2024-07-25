@@ -138,8 +138,23 @@ input[type="submit"] {
   height: auto;
   vertical-align: middle;
   display: table-cell;
+  opacity: 0;
 }
-
+.homepage-slider div.hero-text-tablecell--active {
+  opacity: 1;
+  transform: translateY(200px);
+  animation: fadeInUp 0.5s ease-out forwards;
+}
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(200px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
 .homepage-slider div.hero-text-tablecell div {
   height: auto;
 }

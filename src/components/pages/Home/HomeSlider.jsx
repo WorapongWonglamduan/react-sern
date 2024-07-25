@@ -1,9 +1,10 @@
-import React from "react";
+import React, { useState } from "react";
 import "./Home.css";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 import "./HomeSlider.css";
 const HomeSlider = () => {
+  const [currentSlide, setCurrentSlide] = useState([2, 5]);
   const config = {
     infinite: true,
     autoPlay: true,
@@ -12,7 +13,11 @@ const HomeSlider = () => {
     transitionDuration: 800,
     draggable: true,
     swipeable: true,
+    afterChange: (nextSlide, { currentSlide, onMove }) => {
+      setCurrentSlide([currentSlide]);
+    },
   };
+
   const responsive = {
     superLargeDesktop: {
       // the naming can be any, depends on you.
@@ -35,22 +40,25 @@ const HomeSlider = () => {
 
   const data = [
     {
-      id: 1,
+      id: [2, 5],
       subtitle: "Fresh & Organic",
       headTitle: "Delicious Seasonal Fruits",
       bgClass: "homepage-bg-1",
+      positionClass: "col-md-12 col-lg-7 offset-lg-1 offset-xl-0",
     },
     {
-      id: 2,
+      id: [0, 3],
       subtitle: "Fresh Everyday",
       headTitle: "100% Organic Collection",
       bgClass: "homepage-bg-2",
+      positionClass: "col-lg-10 offset-lg-1 text-center",
     },
     {
-      id: 3,
+      id: [1, 4],
       subtitle: "Mega Sale Going On!",
       headTitle: "Get December Discount",
       bgClass: "homepage-bg-3",
+      positionClass: "col-lg-10  offset-lg-1 text-end",
     },
   ];
 
@@ -62,11 +70,20 @@ const HomeSlider = () => {
             data.map((item, index) => (
               <div key={index} class="homepage-slider">
                 <div class={`single-homepage-slider ${item.bgClass}`}>
-                  <div class="container">
-                    <div class="row">
-                      <div class="col-md-12 col-lg-7 offset-lg-1 offset-xl-0">
-                        <div class="hero-text">
-                          <div class="hero-text-tablecell">
+                  <div className="container">
+                    <div className="row">
+                      <div className={item.positionClass}>
+                        <div className="hero-text">
+                          <div
+                            Name
+                            className={`hero-text-tablecell ${
+                              currentSlide.every((element) =>
+                                item.id.includes(element)
+                              )
+                                ? "hero-text-tablecell--active"
+                                : ""
+                            }`}
+                          >
                             <p class="subtitle">{item.subtitle}c</p>
                             <h1>{item.headTitle}</h1>
                           </div>
