@@ -16,6 +16,7 @@ const HomeSlider = () => {
     afterChange: (nextSlide, { currentSlide, onMove }) => {
       setCurrentSlide([currentSlide]);
     },
+    removeArrowOnDeviceType: ["tablet", "mobile"],
   };
 
   const responsive = {
