@@ -56,27 +56,29 @@ const HomeSlider = () => {
 
   return (
     <>
-      <Carousel responsive={responsive} infinite={true} {...config}>
-        {data &&
-          data.map((item, index) => (
-            <div key={index} class="homepage-slider">
-              <div class={`single-homepage-slider ${item.bgClass}`}>
-                <div class="container">
-                  <div class="row">
-                    <div class="col-md-12 col-lg-7 offset-lg-1 offset-xl-0">
-                      <div class="hero-text">
-                        <div class="hero-text-tablecell">
-                          <p class="subtitle">{item.subtitle}c</p>
-                          <h1>{item.headTitle}</h1>
+      <section id="home">
+        <Carousel responsive={responsive} infinite={true} {...config}>
+          {data &&
+            data.map((item, index) => (
+              <div key={index} class="homepage-slider">
+                <div class={`single-homepage-slider ${item.bgClass}`}>
+                  <div class="container">
+                    <div class="row">
+                      <div class="col-md-12 col-lg-7 offset-lg-1 offset-xl-0">
+                        <div class="hero-text">
+                          <div class="hero-text-tablecell">
+                            <p class="subtitle">{item.subtitle}c</p>
+                            <h1>{item.headTitle}</h1>
+                          </div>
                         </div>
                       </div>
                     </div>
                   </div>
                 </div>
               </div>
-            </div>
-          ))}
-      </Carousel>
+            ))}
+        </Carousel>
+      </section>
     </>
   );
 };
